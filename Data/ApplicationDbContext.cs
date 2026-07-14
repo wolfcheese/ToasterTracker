@@ -23,7 +23,8 @@ public class ApplicationDbContext : IdentityDbContext
 
         modelBuilder.Entity<Game>()
             .HasMany(g => g.Players)
-            .WithOne()
+            .WithOne(gp => gp.Game)
+            .HasForeignKey(gp => gp.GameId)
             .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<Player>()

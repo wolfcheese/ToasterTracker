@@ -1,6 +1,9 @@
 
+@Model Game
 <div id="react-root"></div>
 
 @section Scripts {
+    Model.
+    var gameData = @Html.Raw(Json.Serialize(Model));
     <script type="module" src="~/dist/assets/main.js" asp-append-version="true"></script>
 }

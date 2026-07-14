@@ -124,6 +124,11 @@ public class GamePlayer
     public Character? Character { get; set; }
 
     [Required]
+    public int GameId { get; set; }
+
+    public Game? Game { get; set; }
+
+    [Required]
     public Allegiance Allegiance { get; set; }
 
     public List<Title> Titles { get; set; } = new();
