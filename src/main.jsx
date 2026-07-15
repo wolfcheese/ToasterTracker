@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import GameApp from './App';
 
-const rootElement = document.getElementById('react-root');
+const rootElement = document.getElementById('game-root');
 if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <App />
+      <GameApp />
     </React.StrictMode>
   );
 }

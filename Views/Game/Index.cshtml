@@ -1,9 +1,10 @@
 
-@Model Game
-<div id="react-root"></div>
+@model Game
+<div id="game-root"></div>
 
 @section Scripts {
-    Model.
-    var gameData = @Html.Raw(Json.Serialize(Model));
+    <script>
+        var gameData = @Html.Raw(Json.Serialize(Model));
+    </script>
     <script type="module" src="~/dist/assets/main.js" asp-append-version="true"></script>
 }
