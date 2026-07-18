@@ -35,11 +35,17 @@ public class GameController : Controller
                         Allegiance = gp.Allegiance,
                         Titles = gp.Titles,
                         Motives = gp.Motives,
-                        Player = new Player
+                        Player = gp.Player == null ? null : new Player
                         {
                             Id = gp.Player.Id,
                             Name = gp.Player.Name,
                             UserId = gp.Player.UserId
+                        },
+                        Character = gp.Character == null ? null : new Character
+                        {
+                            Id = gp.Character.Id,
+                            Name = gp.Character.Name,
+                            Portrait = gp.Character.Portrait
                         }
                     }).ToList()
                 })

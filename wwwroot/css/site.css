@@ -75,3 +75,21 @@ button.accept-policy {
 .card {
   background-color: #646464;
 }
+
+.game-player {
+  height: 15vw;
+  width: 18vw;
+  position: relative;
+}
+
+.game-player .portrait {
+  z-index: 2;
+  position: absolute;
+  left: 35%;
+  top: 7%;
+  width: 30%;
+}
+
+.game-player .allegiance {
+  width: 100%;
+}

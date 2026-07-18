@@ -2,12 +2,18 @@
 @model Game
 @{
     ViewBag.Title = "Game";
+    var enums = new Dictionary<string, List<SelectListItem>>()
+    {
+        { "Allegiance", Html.GetEnumSelectList<Allegiance>().ToList() },
+        { "Title", Html.GetEnumSelectList<Title>().ToList() }
+    };
 }
 <div id="game-root"></div>
 
 @section Scripts {
     <script>
         var gameData = @Html.Raw(Json.Serialize(Model));
+        var enums = @Html.Raw(Json.Serialize(enums));
     </script>
     <script type="module" src="~/dist/assets/main.js" asp-append-version="true"></script>
 }
