@@ -5,7 +5,8 @@
     var enums = new Dictionary<string, List<SelectListItem>>()
     {
         { "Allegiance", Html.GetEnumSelectList<Allegiance>().ToList() },
-        { "Title", Html.GetEnumSelectList<Title>().ToList() }
+        { "Title", Html.GetEnumSelectList<Title>().ToList() },
+        { "Victory", Html.GetEnumSelectList<GameVictory>().ToList() }
     };
 }
 <div id="game-root"></div>

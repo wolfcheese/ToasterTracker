@@ -29,6 +29,8 @@ public class GameController : Controller
                     Objective = g.Objective,
                     Victory = g.Victory,
                     Expansions = g.Expansions,
+                    Date = g.Date,
+                    Description = g.Description,
                     Players = g.Players.Select(gp => new GamePlayer
                     {
                         Id = gp.Id,

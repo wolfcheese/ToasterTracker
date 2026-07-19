@@ -76,20 +76,55 @@ button.accept-policy {
   background-color: #646464;
 }
 
+#game-root .card {
+  width: 60vw;
+  height: 45vw;
+}
+
+#game-root .date, #game-root .name, #game-root .description {
+  text-align: center;
+  background-color: black;
+  border: 1px solid #aeaeae;
+  font-size: 1vw;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#game-root .date {
+  max-width: 7vw;
+}
+
+#game-root .name {
+  text-wrap: nowrap;
+}
+
 .game-player {
   height: 15vw;
   width: 18vw;
   position: relative;
 }
 
+.victory-humans {
+  background-image: url('/images/HumanVictory.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.victory-cylons {
+  background-image: url('/images/CylonVictory.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .game-player .portrait {
   z-index: 2;
   position: absolute;
   left: 35%;
-  top: 7%;
+  top: 5%;
   width: 30%;
 }
 
 .game-player .allegiance {
   width: 100%;
+  margin-bottom: 10px;
 }

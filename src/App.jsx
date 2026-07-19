@@ -1,21 +1,19 @@
 import { useState } from 'react';
+import GamePlayer from './GamePlayer';
 
 export default function GameApp() {
   const [game, setGame] = useState(gameData);
-
+  var victory = enums["Victory"].filter(e=>e.value == game.victory)[0].text;
   return (
-    <div className="card mx-auto" style={{ maxWidth: '1028px' }}>
-      <div className="card-body">
-        <h2 className="card-title">New Game</h2>
+    <div className="card mx-auto">
+      <div className={"card-body victory-"+victory.toLowerCase()}>
+        {game.date && <h2 className="card-title date">{new Date(game.date).toLocaleDateString()}</h2>}
         <div className="d-flex align-items-center justify-content-between">
           {game.players.map((gamePlayer, index) => (
-            <div key={gamePlayer.id} className="text-center game-player">
-              <img className="portrait" src={gamePlayer.character.portrait} alt={gamePlayer.character.name} />
-              <img className="allegiance" src={"/images/"+enums["Allegiance"].filter(e=>e.value == gamePlayer.allegiance)[0].text+".png"} alt={enums["Allegiance"].filter(e=>e.value == gamePlayer.allegiance)[0].text} />
-              <span className="name" >{gamePlayer.player.name}</span>
-            </div>
+            <GamePlayer key={gamePlayer.id} gamePlayer={gamePlayer} />
           ))}
         </div>
+        <div className="description">{game.description}</div>
       </div>
     </div>
   );
