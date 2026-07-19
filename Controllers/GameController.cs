@@ -31,6 +31,7 @@ public class GameController : Controller
                     Expansions = g.Expansions,
                     Date = g.Date,
                     Description = g.Description,
+                    Variants = g.Variants,
                     Players = g.Players.Select(gp => new GamePlayer
                     {
                         Id = gp.Id,

@@ -80,8 +80,11 @@ button.accept-policy {
   width: 60vw;
   height: 45vw;
 }
+#game-root .card .header {
+  min-height: 80px;
+}
 
-#game-root .date, #game-root .name, #game-root .description {
+#game-root .date, #game-root .name, #game-root .description, #game-root .expansions, #game-root .variants {
   text-align: center;
   background-color: black;
   border: 1px solid #aeaeae;
@@ -92,6 +95,10 @@ button.accept-policy {
 
 #game-root .date {
   max-width: 7vw;
+}
+
+#game-root .expansions img {
+  max-height: 20px;
 }
 
 #game-root .name {
